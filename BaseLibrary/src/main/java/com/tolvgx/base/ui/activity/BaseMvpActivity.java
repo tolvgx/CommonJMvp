@@ -1,6 +1,5 @@
 package com.tolvgx.base.ui.activity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import com.tolvgx.base.common.BaseApplication;

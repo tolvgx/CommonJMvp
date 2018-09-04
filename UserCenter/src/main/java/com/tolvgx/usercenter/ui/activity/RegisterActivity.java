@@ -1,7 +1,6 @@
 package com.tolvgx.usercenter.ui.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,17 +25,7 @@ public class RegisterActivity extends BaseMvpActivity<RegisterPresenter> impleme
     private EditText mPwdEt;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        initView();
-    }
-
-    /*
-        初始化View
-     */
-    private void initView() {
+    protected void initData(Bundle savedInstanceState) {
         mRegisterBtn = (Button) findViewById(R.id.mRegisterBtn);
         mMobileEt = (EditText) findViewById(R.id.mMobileEt);
         mVerifyCodeEt = (EditText) findViewById(R.id.mVerifyCodeEt);
@@ -53,6 +42,11 @@ public class RegisterActivity extends BaseMvpActivity<RegisterPresenter> impleme
                 mPresenter.register(req);
             }
         });
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_register;
     }
 
     /*

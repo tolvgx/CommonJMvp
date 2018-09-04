@@ -1,22 +1,28 @@
 package com.tolvgx.jmvp.ui.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import com.tolvgx.base.ui.activity.BaseActivity;
 import com.tolvgx.base.utils.GlideUtils;
 import com.tolvgx.jmvp.R;
 import com.tolvgx.usercenter.ui.activity.LoginActivity;
+import butterknife.BindView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
+
+    @BindView(R.id.imageView)
+    ImageView imageView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+    @Override
+    protected void initData(Bundle savedInstanceState) {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

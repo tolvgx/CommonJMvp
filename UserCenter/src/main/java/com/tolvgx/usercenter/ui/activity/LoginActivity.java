@@ -1,19 +1,20 @@
 package com.tolvgx.usercenter.ui.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import com.tolvgx.base.ui.activity.BaseMvpActivity;
 import com.tolvgx.base.utils.ToastUtils;
 import com.tolvgx.usercenter.R;
+import com.tolvgx.usercenter.R2;
 import com.tolvgx.usercenter.data.protocol.LoginReq;
 import com.tolvgx.usercenter.data.protocol.UserInfo;
 import com.tolvgx.usercenter.injection.component.DaggerUserComponent;
 import com.tolvgx.usercenter.injection.moudle.UserMoudle;
 import com.tolvgx.usercenter.presenter.LoginPresenter;
 import com.tolvgx.usercenter.presenter.view.LoginView;
+import butterknife.BindView;
 
 /**
  * Created by tolvgx on 2018/8/23.
@@ -21,26 +22,20 @@ import com.tolvgx.usercenter.presenter.view.LoginView;
 
 public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements LoginView {
 
-    private Button mLoginBtn;
-    private EditText mMobileEt;
-    private EditText mPwdEt;
+    @BindView(R2.id.mMobileEt)
+    EditText mMobileEt;
+    @BindView(R2.id.mPwdEt)
+    EditText mPwdEt;
+    @BindView(R2.id.mLoginBtn)
+    Button mLoginBtn;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        initView();
+    protected int getLayoutId() {
+        return R.layout.activity_login;
     }
 
-    /*
-        初始化View
-     */
-    private void initView() {
-        mMobileEt = (EditText) findViewById(R.id.mMobileEt);
-        mPwdEt = (EditText) findViewById(R.id.mPwdEt);
-
-        mLoginBtn = (Button) findViewById(R.id.mLoginBtn);
+    @Override
+    protected void initData(Bundle savedInstanceState) {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
