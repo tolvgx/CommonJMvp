@@ -22,7 +22,7 @@ buildscript {
 
     ext.dagger_version = '2.11'
 
-    ext.glide_version = "4.7.1"
+    ext.glide_version = "4.8.0"
     ext.butterknife_version = "8.8.1"
 
     ext.circle_imageView_version = "2.1.0"
@@ -41,7 +41,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

@@ -3,6 +3,7 @@ if (isUserModule.toBoolean()) {
 } else {
     apply plugin: 'com.android.application'
 }
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion compile_sdk_version
@@ -42,4 +43,5 @@ dependencies {
     implementation project(':Provider')
 
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
 }

@@ -54,6 +54,6 @@ dependencies {
     api "com.github.bumptech.glide:glide:$glide_version"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
     //ButterKnife
-//    api "com.jakewharton:butterknife:$butterknife_version"
-//    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+    api "com.jakewharton:butterknife:$butterknife_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
 }
