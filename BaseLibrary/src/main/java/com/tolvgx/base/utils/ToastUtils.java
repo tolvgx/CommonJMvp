@@ -2,16 +2,25 @@ package com.tolvgx.base.utils;
 
 import android.text.TextUtils;
 import android.widget.Toast;
-import com.tolvgx.base.common.BaseApplication;
 
 /**
- * Created by tolvgx on 2018/8/28.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/28
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Toast工具类
  */
+
 public class ToastUtils {
 
     private static Toast mToast;
+
+    private ToastUtils() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
 
     /**
      * 显示短信息、字符串
@@ -20,7 +29,7 @@ public class ToastUtils {
         if (TextUtils.isEmpty(text)) return;
 
         if (mToast == null) {
-            mToast = Toast.makeText(BaseApplication.context, text, Toast.LENGTH_SHORT);
+            mToast = Toast.makeText(AppUtils.getContext(), text, Toast.LENGTH_SHORT);
         } else {
             mToast.setText(text);
         }
@@ -31,10 +40,10 @@ public class ToastUtils {
      * 显示短信息、ID
      */
     public static void showShort(int rId) {
-        if (TextUtils.isEmpty(BaseApplication.context.getResources().getText(rId).toString()))
+        if (TextUtils.isEmpty(AppUtils.getContext().getResources().getText(rId).toString()))
             return;
         if (mToast == null) {
-            mToast = Toast.makeText(BaseApplication.context, rId, Toast.LENGTH_SHORT);
+            mToast = Toast.makeText(AppUtils.getContext(), rId, Toast.LENGTH_SHORT);
         } else {
             mToast.setText(rId);
         }
@@ -49,7 +58,7 @@ public class ToastUtils {
         if (TextUtils.isEmpty(text)) return;
 
         if (mToast == null) {
-            mToast = Toast.makeText(BaseApplication.context, text, Toast.LENGTH_LONG);
+            mToast = Toast.makeText(AppUtils.getContext(), text, Toast.LENGTH_LONG);
         } else {
             mToast.setText(text);
         }
@@ -61,10 +70,10 @@ public class ToastUtils {
      * 显示长信息、ID
      */
     public static void showLong(int rId) {
-        if (TextUtils.isEmpty(BaseApplication.context.getResources().getText(rId).toString()))
+        if (TextUtils.isEmpty(AppUtils.getContext().getResources().getText(rId).toString()))
             return;
         if (mToast == null) {
-            mToast = Toast.makeText(BaseApplication.context, rId, Toast.LENGTH_LONG);
+            mToast = Toast.makeText(AppUtils.getContext(), rId, Toast.LENGTH_LONG);
         } else {
             mToast.setText(rId);
         }

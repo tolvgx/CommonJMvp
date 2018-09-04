@@ -25,6 +25,13 @@
         <!--<item name="msv_viewState">loading</item>-->
     <!--</style>-->
 
+    <!--系统弹窗适配-->
+    <style name="shrinkAlertDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">85%</item><!--landscape-->
+        <item name="android:windowMinWidthMajor">85%</item><!--portrait-->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <!-- 加载弹框样式 -->
     <style name="loadingDialogStyle" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
