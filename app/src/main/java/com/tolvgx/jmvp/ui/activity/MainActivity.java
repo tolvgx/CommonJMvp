@@ -5,11 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.tolvgx.base.utils.GlideUtils;
 import com.tolvgx.jmvp.R;
 import com.tolvgx.usercenter.ui.activity.LoginActivity;
-import com.tolvgx.usercenter.ui.activity.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         GlideUtils.loadRoundImage(this, "http://info.flycua.com/jcms/upimg/1531286039086_201803222.png", imageView, 50);
-
-
 
     }
 }

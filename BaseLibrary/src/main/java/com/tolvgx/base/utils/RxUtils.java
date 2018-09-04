@@ -14,25 +14,42 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by tolvgx on 2018/8/28.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/28
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * 放置便于使用 RxJava 的一些工具方法
  */
+
 public class RxUtils {
 
+    private RxUtils() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
+
+    /**
+     * 请求中Rxjava的共有配置
+     * @param observable
+     * @param subscriber
+     * @param mView
+     * @param lifecycleProvider
+     */
     public static void excute(Observable<?> observable, BaseObserver subscriber, final BaseView mView, LifecycleProvider<?> lifecycleProvider){
         observable.subscribeOn(Schedulers.io())
                 .doOnSubscribe(new Consumer<Disposable>() {
                     @Override
                     public void accept(Disposable disposable) throws Exception {
-                        /**
-                         * 显示加载框
+                        /*
+                            显示加载框
                          */
                         mView.showLoading();
 
-                        /**
-                         * 区别是BaseMvpActivity或者BaseMvpFragment
-                         * 并调用相应LoadingDialog的CancelListener实现取消请求
+                        /*
+                            区别是BaseMvpActivity或者BaseMvpFragment
+                            并调用相应LoadingDialog的CancelListener实现取消请求
                          */
                         if (mView instanceof BaseMvpActivity){
                             setCancelListener(((BaseMvpActivity)mView).dialog, disposable);

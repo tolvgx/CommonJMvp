@@ -3,21 +3,27 @@ package com.tolvgx.base.utils;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.request.RequestOptions;
 
 /**
- * Created by tolvgx on 2018/8/21.
+ * ================================================
+ * Created by Tolvgx on 2018/08/21
+ * <a href="tolvgx@163.com">Contact me</a>
+ * <a href="https://github.com/tolvgx">Follow me</a>
+ * ================================================
  *
  * 网络工具类
  */
 
 public class NetWorkUtils {
-    /*
-        判断网络可用
+
+    private NetWorkUtils() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
+
+    /**
+     * 判断网络是否连接
+     * @param context
+     * @return true/false
      */
     public static boolean isNetWorkAvailable(Context context){
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

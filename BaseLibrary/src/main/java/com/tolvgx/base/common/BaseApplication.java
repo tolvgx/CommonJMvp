@@ -18,12 +18,14 @@ public class BaseApplication extends Application {
     public AppComponent appComponent;
 
     public static Context context;
+    public static Application application;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        context = this;
+        application = this;
+        context = getApplicationContext();
 
         initAppInjection();
     }
