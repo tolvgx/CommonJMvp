@@ -26,9 +26,10 @@ dependencies {
     implementation project(':Provider')
 
     if (isUserModule.toBoolean()){
-        compile project(':UserCenter')
+        implementation project(':UserCenter')
     }
 
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 }
