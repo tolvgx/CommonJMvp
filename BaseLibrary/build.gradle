@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release' //添加bintray插件(jcenter)
 
 android {
     compileSdkVersion compile_sdk_version
@@ -21,14 +22,13 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support.constraint:constraint-layout:1.1.2'
-    androidTestApi 'com.android.support.test.espresso:espresso-core:3.0.2'
-    androidTestApi 'com.android.support.test:runner:1.0.2'
-    testApi 'junit:junit:4.12'
 
     //Android Support
     api "com.android.support:support-v4:${android_support_version}"
@@ -56,4 +56,14 @@ dependencies {
     //ButterKnife
     api "com.jakewharton:butterknife:$butterknife_version"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+}
+
+publish {
+    userOrg = 'tolvgx'             // Binary用户名
+    repoName = 'JMvpLibrary'          // Binary上的刚才新建的仓库名（Repository）
+    groupId = 'com.tolvgx.jmvp'        // 依赖名compile 'x:y:z'中的包名x
+    artifactId = 'baselibrary'        // 依赖名compile 'x:y:z'中的项目名y
+    publishVersion = '1.0.1'          // 依赖名compile 'x:y:z'中的版本号z
+    desc = 'Java version of MVP+Rxjava2+Retrofit2+Dagger2 project framework, modular development' // 对该开源组件的说明
+    website = 'https://github.com/tolvgx/CommonJMvp'  // VCS地址，即填写项目上传的Github地址
 }
