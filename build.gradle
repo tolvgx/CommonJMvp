@@ -59,13 +59,7 @@ allprojects {
     }
 }
 
-allprojects {
-    tasks.withType(Javadoc) {
-        options.addStringOption('Xdoclint:none', '-quiet')
-        options.addStringOption('encoding', 'UTF-8')
-    }
-}
-allprojects {
+allprojects {//全局兼容中文字符
     tasks.withType(Javadoc) {
         options{
             encoding "UTF-8"
