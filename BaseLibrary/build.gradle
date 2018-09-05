@@ -40,7 +40,7 @@ dependencies {
     api "io.reactivex.rxjava2:rxjava:$rx2_java_version"
     api "io.reactivex.rxjava2:rxandroid:$rx2_android_version"
     //RxLifecycle
-    api "com.trello.rxlifecycle2:rxlifecycle-components:$rx_lifecycle_version"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:$rx2_lifecycle_version"
 //    //Retrofit
     api "com.squareup.okhttp3:okhttp:${ok_http_version}"
     api "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"

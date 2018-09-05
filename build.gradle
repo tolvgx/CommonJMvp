@@ -12,16 +12,10 @@ buildscript {
 
     ext.rx2_java_version = '2.2.0'
     ext.rx2_android_version ='2.0.2'
-    ext.rx1_android_version ='1.2.1'
-
-    ext.rx_lifecycle_version = '2.2.2'
-    ext.rx1_lifecycle_version = '1.0'
-
+    ext.rx2_lifecycle_version = '2.2.2'
     ext.ok_http_version = '3.11.0'
     ext.retrofit_version = '2.4.0'
-
     ext.dagger_version = '2.11'
-
     ext.glide_version = "4.8.0"
     ext.butterknife_version = "8.8.1"
 
