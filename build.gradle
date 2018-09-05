@@ -78,3 +78,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//jcenter统一声明配置
+ext {
+    mUserOrg = 'tolvgx'
+    mRepoName = 'JMvpLibrary'
+    mGroupId = 'com.tolvgx.jmvp'
+    mPublishVersion = '1.0.3'
+    mDesc = 'Java version of MVP+Rxjava2+Retrofit2+Dagger2 project framework, modular development'
+    mWebsite = 'https://github.com/tolvgx/CommonJMvp'
+}
