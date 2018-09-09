@@ -2,13 +2,17 @@ package com.tolvgx.base.common;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.tolvgx.base.injection.component.AppComponent;
 import com.tolvgx.base.injection.component.DaggerAppComponent;
 import com.tolvgx.base.injection.moudle.AppMoudle;
 
 /**
- * Created by tolvgx on 2018/8/22.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/15
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Application 基类
  */

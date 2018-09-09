@@ -4,11 +4,15 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
-
 import java.util.Stack;
 
 /**
- * Created by tolvgx on 2018/8/22.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/21
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Activity管理器
  */

@@ -2,7 +2,7 @@ package com.tolvgx.base.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.tolvgx.base.common.BaseConstant;
+import com.tolvgx.base.common.SPConstant;
 
 /**
  * <pre>
@@ -36,7 +36,7 @@ public class SPUtils {
      * 字符串
      * Put the string value in sp.
      */
-    private static void putString(String key, String value) {
+    public static void putString(String key, String value) {
         getSP().edit().putString(key, value).apply();
     }
 
@@ -76,7 +76,7 @@ public class SPUtils {
      * int型
      * Put the int value in sp.
      */
-    private static void putInt(String key,  int value) {
+    public static void putInt(String key,  int value) {
         getSP().edit().putInt(key, value).apply();
     }
 
@@ -96,7 +96,7 @@ public class SPUtils {
      * long型
      * Put the long value in sp.
      */
-    private static void putLong(String key, long value) {
+    public static void putLong(String key, long value) {
         getSP().edit().putLong(key, value).apply();
     }
 
@@ -117,7 +117,7 @@ public class SPUtils {
      * float型
      * Put the float value in sp.
      */
-    private static void putFloat(String key, float value) {
+    public static void putFloat(String key, float value) {
         getSP().edit().putFloat(key, value).apply();
     }
 
@@ -125,7 +125,7 @@ public class SPUtils {
      * 删除key数据
      * Remove one preference in sp.
      */
-    private static void remove(String key) {
+    public static void remove(String key) {
         getSP().edit().remove(key).apply();
     }
 
@@ -133,7 +133,7 @@ public class SPUtils {
      * 清空所有数据
      * Remove all preferences in sp.
      */
-    private static void clear(){
+    public static void clear(){
         getSP().edit().clear().apply();
     }
 
@@ -142,7 +142,7 @@ public class SPUtils {
      */
     private static SharedPreferences getSP(){
         if (sp == null)
-            sp = AppUtils.getContext().getSharedPreferences(BaseConstant.TABLE_SP, Context.MODE_PRIVATE);
+            sp = AppUtils.getContext().getSharedPreferences(SPConstant.TABLE_SP, Context.MODE_PRIVATE);
         return sp;
     }
 

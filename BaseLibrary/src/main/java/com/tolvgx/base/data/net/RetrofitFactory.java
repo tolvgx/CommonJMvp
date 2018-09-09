@@ -46,8 +46,8 @@ public class RetrofitFactory {
 
                 Request request = chain.request().newBuilder()
                         .addHeader("Content_Type", "application/json")
+                        .addHeader("Accept", "application/json")
                         .addHeader("charset", "UTF-8")
-                        //.addHeader("token",AppPrefsUtils.getString(BaseConstant.KEY_SP_TOKEN))
                         .build();
 
                 return chain.proceed(request);
