@@ -6,11 +6,15 @@ import com.tolvgx.base.injection.ActivityScope;
 import com.tolvgx.base.injection.moudle.ActivityMoudle;
 import com.tolvgx.base.injection.moudle.LifecycleProviderModule;
 import com.trello.rxlifecycle2.LifecycleProvider;
-
 import dagger.Component;
 
 /**
- * Created by tolvgx on 2018/8/27.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/27
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Activity级别Component
  */

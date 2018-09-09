@@ -10,10 +10,16 @@ import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.util.EndConsumerHelper;
 
 /**
- * Created by tolvgx on 2018/8/23.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/23
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Rx订阅者默认实现(参考DefaultObserver实现)
  */
+
 public class BaseObserver<T> implements Observer<T> {
 
     private BaseView mView;

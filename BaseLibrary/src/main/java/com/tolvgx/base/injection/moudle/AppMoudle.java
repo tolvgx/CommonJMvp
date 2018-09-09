@@ -1,19 +1,22 @@
 package com.tolvgx.base.injection.moudle;
 
 import android.content.Context;
-
 import com.tolvgx.base.common.BaseApplication;
-
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by tolvgx on 2018/8/27.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/27
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Application级别Module
  */
+
 @Module
 public class AppMoudle {
 

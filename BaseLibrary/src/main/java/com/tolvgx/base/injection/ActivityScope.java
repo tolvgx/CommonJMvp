@@ -6,7 +6,12 @@ import javax.inject.Scope;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Created by tolvgx on 2018/8/27.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/27
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Activity级别 作用域
  */

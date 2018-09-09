@@ -9,7 +9,12 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * Created by tolvgx on 2018/8/20.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/20
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * Activity基类，业务无关
  */

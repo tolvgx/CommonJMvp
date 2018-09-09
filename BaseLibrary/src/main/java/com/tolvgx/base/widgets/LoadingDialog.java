@@ -8,9 +8,13 @@ import android.support.annotation.NonNull;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import com.tolvgx.base.R;
-
 /**
- * Created by tolvgx on 2018/8/28.
+ * <pre>
+ *     author: Tolvgx
+ *     date  : 2018/8/28
+ *     email : tolvgx@163.com
+ *     github: https://github.com/tolvgx
+ * </pre>
  *
  * 请求加载框
  */
