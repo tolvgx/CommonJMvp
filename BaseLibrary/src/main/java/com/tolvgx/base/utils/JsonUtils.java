@@ -9,8 +9,8 @@ public final class JsonUtils {
 	
     /**
      * 对象转换成json字符串
-     * @param obj 
-     * @return 
+     * @param obj Object
+     * @return String
      */
     public static String toJson(Object obj) {
 
@@ -20,9 +20,9 @@ public final class JsonUtils {
 
     /**
      * json字符串转成对象
-     * @param str  
-     * @param type
-     * @return 
+     * @param str String
+     * @param type Type
+     * @return T
      */
     public static <T> T fromJson(String str, Type type) {
         Gson gson = new Gson();
@@ -31,9 +31,9 @@ public final class JsonUtils {
 
     /**
      * json字符串转成对象
-     * @param str  
-     * @param type 
-     * @return 
+     * @param str String
+     * @param type Class<T>
+     * @return T
      */
     public static <T> T fromJson(String str, Class<T> type) {
         Gson gson = new Gson();

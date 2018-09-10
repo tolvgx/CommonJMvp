@@ -32,10 +32,10 @@ public class RxUtils {
 
     /**
      * 请求中Rxjava的共有配置
-     * @param observable
-     * @param subscriber
-     * @param mView
-     * @param lifecycleProvider
+     * @param observable Observable
+     * @param subscriber BaseObserver
+     * @param mView BaseView
+     * @param lifecycleProvider LifecycleProvider
      */
     public static void excute(Observable<?> observable, BaseObserver subscriber, final BaseView mView, LifecycleProvider<?> lifecycleProvider){
         observable.subscribeOn(Schedulers.io())
