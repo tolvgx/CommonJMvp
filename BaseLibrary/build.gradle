@@ -41,7 +41,7 @@ dependencies {
     api "io.reactivex.rxjava2:rxandroid:$rx2_android_version"
     //RxLifecycle
     api "com.trello.rxlifecycle2:rxlifecycle-components:$rx2_lifecycle_version"
-//    //Retrofit
+    //Retrofit
     api "com.squareup.okhttp3:okhttp:${ok_http_version}"
     api "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
     api "com.squareup.retrofit2:retrofit:${retrofit_version}"
@@ -56,6 +56,8 @@ dependencies {
     //ButterKnife
     api "com.jakewharton:butterknife:$butterknife_version"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+    //EventBus
+    api "org.greenrobot:eventbus:$eventbus_version"
 }
 
 publish {

@@ -10,10 +10,14 @@ import com.tolvgx.usercenter.R;
 import com.tolvgx.usercenter.R2;
 import com.tolvgx.usercenter.data.protocol.LoginReq;
 import com.tolvgx.usercenter.data.protocol.UserInfo;
+import com.tolvgx.usercenter.event.MessageEvent;
 import com.tolvgx.usercenter.injection.component.DaggerUserComponent;
 import com.tolvgx.usercenter.injection.moudle.UserMoudle;
 import com.tolvgx.usercenter.presenter.LoginPresenter;
 import com.tolvgx.usercenter.presenter.view.LoginView;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import butterknife.BindView;
 
 /**
@@ -36,6 +40,8 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
 
     @Override
     protected void initData(Bundle savedInstanceState) {
+        EventBus.getDefault().register(this);
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,5 +71,10 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
     @Override
     public void onLoginResult(UserInfo userInfo) {
         ToastUtils.showLong("登录成功");
+    }
+
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void onDataReceived(MessageEvent msg){
+        ToastUtils.showLong("接收到上个页面传来的数据："+msg.name);
     }
 }
