@@ -1,4 +1,4 @@
-package com.tolvgx.base.injection;
+package com.tolvgx.base.di;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -13,10 +13,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *     github: https://github.com/tolvgx
  * </pre>
  *
- * Activity级别 作用域
+ * 组件级别 作用域
  */
 
 @Scope
 @Documented
 @Retention(RUNTIME)
-public @interface ActivityScope{}
+public @interface PerComponentScope {}

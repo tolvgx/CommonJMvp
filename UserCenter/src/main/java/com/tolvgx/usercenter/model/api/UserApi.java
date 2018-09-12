@@ -1,6 +1,6 @@
 package com.tolvgx.usercenter.model.api;
 
-import com.tolvgx.base.data.protocol.BaseResp;
+import com.tolvgx.base.model.entity.BaseResp;
 import com.tolvgx.usercenter.model.entity.LoginReq;
 import com.tolvgx.usercenter.model.entity.RegisterReq;
 import com.tolvgx.usercenter.model.entity.UserInfo;

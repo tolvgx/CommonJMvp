@@ -2,9 +2,9 @@ package com.tolvgx.base.common;
 
 import android.app.Application;
 import android.content.Context;
-import com.tolvgx.base.injection.component.AppComponent;
-import com.tolvgx.base.injection.component.DaggerAppComponent;
-import com.tolvgx.base.injection.moudle.AppMoudle;
+import com.tolvgx.base.di.component.AppComponent;
+import com.tolvgx.base.di.component.DaggerAppComponent;
+import com.tolvgx.base.di.moudle.AppMoudle;
 
 /**
  * <pre>

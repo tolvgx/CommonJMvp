@@ -1,4 +1,4 @@
-package com.tolvgx.base.injection.moudle;
+package com.tolvgx.base.di.moudle;
 
 import com.trello.rxlifecycle2.LifecycleProvider;
 import dagger.Module;

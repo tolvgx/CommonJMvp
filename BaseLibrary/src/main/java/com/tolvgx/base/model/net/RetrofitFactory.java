@@ -1,4 +1,4 @@
-package com.tolvgx.base.data.net;
+package com.tolvgx.base.model.net;
 
 import com.tolvgx.base.common.BaseConstant;
 import java.io.IOException;

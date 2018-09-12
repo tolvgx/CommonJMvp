@@ -27,9 +27,4 @@ public class BasePresenter<T extends BaseView>{
 
     @Inject
     public LifecycleProvider<?> lifecycleProvider;
-
-//    @Inject
-//    public BasePresenter(T baseView){
-//        this.mView = baseView;
-//    }
 }

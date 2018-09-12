@@ -1,7 +1,7 @@
 package com.tolvgx.usercenter.di.component;
 
-import com.tolvgx.base.injection.PerComponentScope;
-import com.tolvgx.base.injection.component.ActivityComponent;
+import com.tolvgx.base.di.PerComponentScope;
+import com.tolvgx.base.di.component.ActivityComponent;
 import com.tolvgx.usercenter.ui.activity.LoginActivity;
 import com.tolvgx.usercenter.ui.activity.RegisterActivity;
 import dagger.Component;

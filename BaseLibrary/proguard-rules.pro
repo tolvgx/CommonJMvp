@@ -206,6 +206,3 @@
 #-keep class com.google.gson.stream.** { *; }
 -keep class sun.misc.Unsafe { *; }
 -keep class com.google.gson.** {*;}
--keep class com.jetair.cuair.http.models.** { *; }
--keep class com.jetair.cuair.mvp.data.protocol.** { *; }
--keep class com.tolvgx.base.data.protocol.** { *; }

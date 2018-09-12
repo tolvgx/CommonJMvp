@@ -1,7 +1,7 @@
-package com.tolvgx.base.injection.moudle;
+package com.tolvgx.base.di.moudle;
 
 import android.app.Activity;
-import com.tolvgx.base.injection.ActivityScope;
+import com.tolvgx.base.di.ActivityScope;
 import dagger.Module;
 import dagger.Provides;
 

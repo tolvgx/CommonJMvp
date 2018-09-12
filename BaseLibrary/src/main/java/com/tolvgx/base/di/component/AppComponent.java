@@ -1,7 +1,7 @@
-package com.tolvgx.base.injection.component;
+package com.tolvgx.base.di.component;
 
 import android.content.Context;
-import com.tolvgx.base.injection.moudle.AppMoudle;
+import com.tolvgx.base.di.moudle.AppMoudle;
 import javax.inject.Singleton;
 import dagger.Component;
 

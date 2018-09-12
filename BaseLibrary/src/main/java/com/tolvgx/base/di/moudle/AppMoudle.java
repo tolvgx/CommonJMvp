@@ -1,4 +1,4 @@
-package com.tolvgx.base.injection.moudle;
+package com.tolvgx.base.di.moudle;
 
 import android.content.Context;
 import com.tolvgx.base.common.BaseApplication;

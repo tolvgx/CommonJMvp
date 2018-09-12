@@ -1,10 +1,10 @@
-package com.tolvgx.base.injection.component;
+package com.tolvgx.base.di.component;
 
 import android.app.Activity;
 import android.content.Context;
-import com.tolvgx.base.injection.ActivityScope;
-import com.tolvgx.base.injection.moudle.ActivityMoudle;
-import com.tolvgx.base.injection.moudle.LifecycleProviderModule;
+import com.tolvgx.base.di.ActivityScope;
+import com.tolvgx.base.di.moudle.ActivityMoudle;
+import com.tolvgx.base.di.moudle.LifecycleProviderModule;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import dagger.Component;
 

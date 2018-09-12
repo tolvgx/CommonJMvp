@@ -1,4 +1,4 @@
-package com.tolvgx.base.data.protocol;
+package com.tolvgx.base.model.entity;
 
 /**
  * Created by tolvgx on 2018/8/22.

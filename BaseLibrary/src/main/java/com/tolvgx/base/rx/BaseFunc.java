@@ -1,7 +1,7 @@
 package com.tolvgx.base.rx;
 
 import com.tolvgx.base.common.ResultCode;
-import com.tolvgx.base.data.protocol.BaseResp;
+import com.tolvgx.base.model.entity.BaseResp;
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
 

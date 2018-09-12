@@ -1,6 +1,6 @@
 package com.tolvgx.usercenter.model.repository;
 
-import com.tolvgx.base.data.net.RetrofitFactory;
+import com.tolvgx.base.model.net.RetrofitFactory;
 import com.tolvgx.base.rx.BaseFunc;
 import com.tolvgx.base.rx.BaseFuncBoolean;
 import com.tolvgx.usercenter.model.api.UserApi;
