@@ -3,9 +3,9 @@ package com.tolvgx.usercenter.presenter;
 import com.tolvgx.base.presenter.BasePresenter;
 import com.tolvgx.base.rx.BaseObserver;
 import com.tolvgx.base.utils.RxUtils;
-import com.tolvgx.usercenter.data.protocol.RegisterReq;
+import com.tolvgx.usercenter.model.entity.RegisterReq;
+import com.tolvgx.usercenter.model.repository.UserRepository;
 import com.tolvgx.usercenter.presenter.view.RegisterView;
-import com.tolvgx.usercenter.service.UserService;
 import javax.inject.Inject;
 
 /**
@@ -15,22 +15,17 @@ import javax.inject.Inject;
 public class RegisterPresenter extends BasePresenter<RegisterView>{
 
     @Inject
-    public UserService userService;
+    public UserRepository userRepository;
 
     @Inject
     public RegisterPresenter(){}
-
-//    @Inject
-//    public RegisterPresenter(RegisterView registerView){
-//        super(registerView);
-//    }
 
     /*
         业务逻辑
      */
     public void register(RegisterReq req){
 
-        RxUtils.excute(userService.register(req), new BaseObserver<Boolean>(mView, context){
+        RxUtils.excute(userRepository.register(req), new BaseObserver<Boolean>(mView, context){
             @Override
             public void onNext(Boolean t) {
                 if (t)

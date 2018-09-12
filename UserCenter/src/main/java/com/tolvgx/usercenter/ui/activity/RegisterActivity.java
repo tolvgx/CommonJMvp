@@ -7,9 +7,8 @@ import android.widget.EditText;
 import com.tolvgx.base.ui.activity.BaseMvpActivity;
 import com.tolvgx.base.utils.ToastUtils;
 import com.tolvgx.usercenter.R;
-import com.tolvgx.usercenter.data.protocol.RegisterReq;
-import com.tolvgx.usercenter.injection.component.DaggerUserComponent;
-import com.tolvgx.usercenter.injection.moudle.UserMoudle;
+import com.tolvgx.usercenter.model.entity.RegisterReq;
+import com.tolvgx.usercenter.di.component.DaggerUserComponent;
 import com.tolvgx.usercenter.presenter.RegisterPresenter;
 import com.tolvgx.usercenter.presenter.view.RegisterView;
 
@@ -56,7 +55,6 @@ public class RegisterActivity extends BaseMvpActivity<RegisterPresenter> impleme
     protected void injectComponent() {
         DaggerUserComponent.builder()
                 .activityComponent(mActivityComponent)
-                .userMoudle(new UserMoudle())
                 .build()
                 .inject(this);
         mPresenter.mView = this;

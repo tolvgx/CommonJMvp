@@ -1,4 +1,4 @@
-package com.tolvgx.usercenter.data.protocol;
+package com.tolvgx.usercenter.model.entity;
 
 /**
  * Created by tolvgx on 2018/8/23.

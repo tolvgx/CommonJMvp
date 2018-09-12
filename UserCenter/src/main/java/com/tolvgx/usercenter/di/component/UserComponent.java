@@ -1,8 +1,7 @@
-package com.tolvgx.usercenter.injection.component;
+package com.tolvgx.usercenter.di.component;
 
 import com.tolvgx.base.injection.PerComponentScope;
 import com.tolvgx.base.injection.component.ActivityComponent;
-import com.tolvgx.usercenter.injection.moudle.UserMoudle;
 import com.tolvgx.usercenter.ui.activity.LoginActivity;
 import com.tolvgx.usercenter.ui.activity.RegisterActivity;
 import dagger.Component;
@@ -12,7 +11,7 @@ import dagger.Component;
  */
 
 @PerComponentScope
-@Component(dependencies = ActivityComponent.class, modules = UserMoudle.class)
+@Component(dependencies = ActivityComponent.class)
 public interface UserComponent {
     void inject(RegisterActivity activity);
     void inject(LoginActivity activity);

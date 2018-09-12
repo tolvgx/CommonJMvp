@@ -1,13 +1,13 @@
-package com.tolvgx.usercenter.data.protocol;
+package com.tolvgx.usercenter.model.entity;
 
 /**
  * Created by tolvgx on 2018/8/23.
  */
 
-public class LoginReq {
+public class RegisterReq {
     private String mobile;
     private String pwd;
-    private String pushId;
+    private String verifyCode;
 
     public String getMobile() {
         return mobile;
@@ -25,11 +25,11 @@ public class LoginReq {
         this.pwd = pwd;
     }
 
-    public String getPushId() {
-        return pushId;
+    public String getVerifyCode() {
+        return verifyCode;
     }
 
-    public void setPushId(String pushId) {
-        this.pushId = pushId;
+    public void setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
     }
 }

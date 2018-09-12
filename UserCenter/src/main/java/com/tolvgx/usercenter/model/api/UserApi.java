@@ -1,9 +1,9 @@
-package com.tolvgx.usercenter.data.api;
+package com.tolvgx.usercenter.model.api;
 
 import com.tolvgx.base.data.protocol.BaseResp;
-import com.tolvgx.usercenter.data.protocol.LoginReq;
-import com.tolvgx.usercenter.data.protocol.RegisterReq;
-import com.tolvgx.usercenter.data.protocol.UserInfo;
+import com.tolvgx.usercenter.model.entity.LoginReq;
+import com.tolvgx.usercenter.model.entity.RegisterReq;
+import com.tolvgx.usercenter.model.entity.UserInfo;
 import io.reactivex.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

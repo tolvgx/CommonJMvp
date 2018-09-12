@@ -8,11 +8,10 @@ import com.tolvgx.base.ui.activity.BaseMvpActivity;
 import com.tolvgx.base.utils.ToastUtils;
 import com.tolvgx.usercenter.R;
 import com.tolvgx.usercenter.R2;
-import com.tolvgx.usercenter.data.protocol.LoginReq;
-import com.tolvgx.usercenter.data.protocol.UserInfo;
+import com.tolvgx.usercenter.model.entity.LoginReq;
+import com.tolvgx.usercenter.model.entity.UserInfo;
 import com.tolvgx.usercenter.event.MessageEvent;
-import com.tolvgx.usercenter.injection.component.DaggerUserComponent;
-import com.tolvgx.usercenter.injection.moudle.UserMoudle;
+import com.tolvgx.usercenter.di.component.DaggerUserComponent;
 import com.tolvgx.usercenter.presenter.LoginPresenter;
 import com.tolvgx.usercenter.presenter.view.LoginView;
 import org.greenrobot.eventbus.EventBus;
@@ -62,7 +61,6 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
     protected void injectComponent() {
         DaggerUserComponent.builder()
                 .activityComponent(mActivityComponent)
-                .userMoudle(new UserMoudle())
                 .build()
                 .inject(this);
         mPresenter.mView = this;
