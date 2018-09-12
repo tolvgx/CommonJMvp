@@ -63,7 +63,6 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements Lo
                 .activityComponent(mActivityComponent)
                 .build()
                 .inject(this);
-        mPresenter.mView = this;
     }
 
     @Override

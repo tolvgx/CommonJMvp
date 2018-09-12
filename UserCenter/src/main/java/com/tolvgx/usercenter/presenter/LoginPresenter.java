@@ -26,11 +26,11 @@ public class LoginPresenter extends BasePresenter<LoginView>{
      */
     public void login(LoginReq req){
 
-        RxUtils.excute(userRepository.login(req), new BaseObserver<UserInfo>(mView, context){
+        RxUtils.excute(userRepository.login(req), new BaseObserver<UserInfo>(getPView(), context){
             @Override
             public void onNext(UserInfo userInfo) {
-                mView.onLoginResult(userInfo);
+                getPView().onLoginResult(userInfo);
             }
-        }, mView, lifecycleProvider);
+        }, getPView(), lifecycleProvider);
     }
 }

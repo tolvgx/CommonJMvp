@@ -25,12 +25,12 @@ public class RegisterPresenter extends BasePresenter<RegisterView>{
      */
     public void register(RegisterReq req){
 
-        RxUtils.excute(userRepository.register(req), new BaseObserver<Boolean>(mView, context){
+        RxUtils.excute(userRepository.register(req), new BaseObserver<Boolean>(getPView(), context){
             @Override
             public void onNext(Boolean t) {
                 if (t)
-                    mView.onRegisterResult(true);
+                    getPView().onRegisterResult(true);
             }
-        }, mView, lifecycleProvider);
+        }, getPView(), lifecycleProvider);
     }
 }

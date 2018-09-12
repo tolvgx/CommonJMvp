@@ -36,16 +36,31 @@ public abstract class BaseMvpFragment<T extends BasePresenter> extends BaseFragm
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         initActivityInjection();
         injectComponent();
 
+        //让Presenter持有view的引用
+        if (mPresenter != null){
+            mPresenter.attachView(this);
+        }
+
         //初始加载框
         dialog = new LoadingDialog(getActivity());
+
+        super.onViewCreated(view, savedInstanceState);
     }
 
-    /*
-        初始Activity级别Component
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mPresenter != null) {
+            mPresenter.detachView();
+            mPresenter = null;
+        }
+    }
+
+    /**
+     * 初始Activity级别Component
      */
     private void initActivityInjection() {
         mActivityComponent = DaggerActivityComponent.builder()
@@ -55,29 +70,29 @@ public abstract class BaseMvpFragment<T extends BasePresenter> extends BaseFragm
                 .build();
     }
 
-    /*
-       组建级Dagger注册
-    */
+    /**
+     * 组建级Dagger注册
+     */
     protected abstract void injectComponent();
 
-    /*
-        显示加载框，默认实现
+    /**
+     * 显示加载框，默认实现
      */
     @Override
     public void showLoading() {
         dialog.show();
     }
 
-    /*
-        隐藏加载框，默认实现
+    /**
+     * 隐藏加载框，默认实现
      */
     @Override
     public void hideLoading() {
         dialog.dismiss();
     }
 
-    /*
-        错误信息提示，默认实现
+    /**
+     * 错误信息提示，默认实现
      */
     @Override
     public void onError(String msg) {

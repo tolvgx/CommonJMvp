@@ -57,7 +57,6 @@ public class RegisterActivity extends BaseMvpActivity<RegisterPresenter> impleme
                 .activityComponent(mActivityComponent)
                 .build()
                 .inject(this);
-        mPresenter.mView = this;
     }
 
     @Override
