@@ -206,3 +206,5 @@
 #-keep class com.google.gson.stream.** { *; }
 -keep class sun.misc.Unsafe { *; }
 -keep class com.google.gson.** {*;}
+-keep class com.tolvgx.base.model.entity.** { *; }
+-keep class com.tolvgx.usercenter.model.entity.** { *; }
